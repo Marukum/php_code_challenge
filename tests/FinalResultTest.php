@@ -33,9 +33,11 @@ final class FinalResultTest extends TestCase
 
     public function testReturnsTheCorrectHash(): void
     {
+        
         $f = new FinalResult();
-        $res = $f->results('tests/support/data_sample.csv');
+        $res = $f->results('tests/support/data_sample.csv',count($this->expected_return['records']));
         unset($res["document"]); 
         $this->assertEquals($res, $this->expected_return);
+        
     }
 }
