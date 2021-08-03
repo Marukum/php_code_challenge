@@ -35,7 +35,7 @@ final class FinalResultTest extends TestCase
     {
         
         $f = new FinalResult();
-        $res = $f->results('tests/support/data_sample.csv',count($this->expected_return['records']));
+        $res = $f->results('tests/support/data_sample.csv', count($this->expected_return['records']));
         unset($res["document"]); 
         $this->assertEquals($res, $this->expected_return);
         

@@ -10,7 +10,7 @@ class FinalResult {
         }
         while(!feof($d)) {
             $r = fgetcsv($d);
-            //if(count($r) == 16) {
+            
             if(count($r) == $arraySize) {
                 $amt = !$r[8] || $r[8] == "0" ? 0 : (float) $r[8];
                 $ban = !$r[6] ? "Bank account number missing" : (int) $r[6];
